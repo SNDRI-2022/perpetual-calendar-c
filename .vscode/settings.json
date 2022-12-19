@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "leap_year.h": "c",
+        "stdbool.h": "c"
+    }
+}
