@@ -9,22 +9,27 @@ c语言作业，远程仓库用于保存
 - 编辑器 Visual Studio Code
 - 编译器gcc(MinGW64)
 
-``` txt
+```txt
 perpetual-calendar-c    //项目目录
-├─ .vscode      //vscode配置文件目录
+├─ .vscode        //vscode配置文件目录
 │  ├─ launch.json
 │  ├─ settings.json
 │  └─ tasks.json
-├─ include      //公共头文件目录
-│  └─ leap_year //某个功能的定义和实现目录
+├─ include     //公共头文件目录
+│  ├─ algorithm_MyWeek     //判断某年的1月1日是星期几
+│  │  ├─ algorithm_MyWeek.c
+│  │  └─ algorithm_MyWeek.h
+│  └─ leap_year      //判断是否是闰年
 │     ├─ leap_year.c
-│     └─ leap_year.h    
-├─ Makefile     //make文件
-├─ output
-│  └─ main.exe  //输出的可执行文件
-├─ README.md    //帮助文档
-└─ src          //源文件目录
-   └─ main.c    //主函数源文件
+│     └─ leap_year.h
+├─ Makefile    make配置文件
+├─ output      //输出的可执行文件目录
+│  └─ main.exe
+├─ README.md   //帮助文档
+└─ src      //源文件目录
+   ├─ main.c
+   └─ main.o
+
 ```
 
 ### 编译和运行

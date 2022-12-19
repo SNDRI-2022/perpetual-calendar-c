@@ -5,11 +5,11 @@
 
 /********************************************************************************
  * @brief 判断输入的字符串是否有误，输入正确则返回转换后的整数类型
- * 
- * @param  _str             
- * @return int              
+ *
+ * @param  _str
+ * @return int
  ********************************************************************************/
-int argv2(char **_str)
+int argv2(char *_str)
 {
 
 	if (!atoi(_str))
@@ -38,25 +38,39 @@ int main(int argc, char **argv)
 	// 	// else
 	// 	// 	printf("flase");
 	// }
-	
-	if(argc != 2)
+
+	// //!测试用
+	// int a;
+	// scanf("%d",&a);
+	// int b = ((int)(3.4 + (a - 3) % 12 * 2.6)) % 7;
+	// int c = ((int) (3.4 + (3 - a) % 12 * 2.6)) % 7;
+	// printf("b:%d\n", b);
+	// printf("c:%d\n", c);
+
+
+	int year = 0;
+	if (argc != 2)
 	{
 		char str[4];
 		printf("可接收程序参数(保留4位)main.exe <年份>\n例如main.exe 2022\n");
 		printf("\nmethod of application\tmain.exe {year}\nsuh as\tmain.exe 2022\n");
 		printf("输入一个值(input):");
-		scanf("%s",str);
+		scanf("%s", str);
 		str[4] = '\0'; // 防止溢出异常
-		int year = argv2(str);
+		year = argv2(str);
 		printf("输入年份为(Your input is):%d\n", year);
 	}
 	else
 	{
 		argv[1][4] = '\0'; // 防止溢出异常
-		int year = argv2(argv[1]);
+		year = argv2(argv[1]);
 		printf("输入年份为(Your input is): % d\n ", year);
 	}
+	bool is_yleap_year = func_LeapYear(year);
+	int year_1_1  = func_MyWeek(year,is_yleap_year);
 
-	printf("--test--\n");
+	printf("%d年的1月1日是星期%d\n", year, (year_1_1 == 0 ? 7 : year_1_1));
+	printf("%d/1/1 = %d\n", year, (year_1_1 == 0 ? 7 : year_1_1));
+
 	return (0);
 }
