@@ -5,7 +5,7 @@
 c语言作业，远程仓库用于保存
 使用Make编译工具
 
-- 语言 c99
+- 语言版本 c99
 - 编辑器 Visual Studio Code
 - 编译器gcc(MinGW64)
 
