@@ -18,7 +18,7 @@ int main(int argc, char **argv)
 	// 	// else
 	// 	// 	printf("flase");
 	// }
-
+	printf("--test--\n");
 	return (0);
 
 }

@@ -2,6 +2,7 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "program": "${workspaceFolder}/output/main",
             "name": "Debug",
             "type": "cppdbg",
             "request": "launch",
@@ -11,16 +12,25 @@
             "environment": [],
             "externalConsole": false,
             "linux": {
+                "name": "Debug",
+                "type": "cppdbg",
+                "request": "launch",
                 "MIMode": "gdb",
                 "miDebuggerPath": "gdb",
                 "program": "${workspaceFolder}/output/main"
             },
             "osx": {
+                "name": "Debug",
+                "type": "cppdbg",
+                "request": "launch",
                 "MIMode": "lldb",
                 "miDebuggerPath": "lldb-mi",
                 "program": "${workspaceFolder}/output/main"
             },
             "windows": {
+                "name": "Debug",
+                "type": "cppdbg",
+                "request": "launch",
                 "MIMode": "gdb",
                 "miDebuggerPath": "gdb.exe",
                 "program": "${workspaceFolder}/output/main.exe"
