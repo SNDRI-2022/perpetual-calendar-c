@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "./leap_year/leap_year.h"
+#include "./algorithm_MyWeek/algorithm_MyWeek.h"
 
 /********************************************************************************
  * @brief 判断输入的字符串是否有误，输入正确则返回转换后的整数类型
