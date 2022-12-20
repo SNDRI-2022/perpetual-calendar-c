@@ -86,7 +86,7 @@ gcc -std=c99 -g .\src\main.c -I .\include -o .\output\main.exe; .\output\main.ex
 #### 判断部分
 
 布尔类型变量`is_yleap_year`接收`func_LeapYear(year)`函数的返回值，如果是闰年返回true反之返回false
-整数类型`year_1_1`接收`func_MyWeek(year, is_yleap_year);`函数返回的值，返回程序接受参数`year`年1月1日是周几，0表示周日日，1表示周一。
+整型类型`year_1_1`变量接收`func_MyWeek(year, is_yleap_year);`函数返回的值，返回程序接受参数`year`年1月1日是周几，0表示周日日，1表示周一。
 
 #### 输出部分
 
@@ -98,6 +98,15 @@ gcc -std=c99 -g .\src\main.c -I .\include -o .\output\main.exe; .\output\main.ex
 [leap_year.h文件](./include/leap_year/leap_year.h)
 ![leap_year.h](./img/code-leap_year.png)
 
-#### 设计思路
+#### leap_year.h设计思路
 
-整形变量`_year`接收一个整形参数，能被400整除是闰年返回ture，反之进行二次判断，能被4整除但不能被100整除是闰年返回ture，反之不是闰年返回false
+`bool func_LeapYear(int _year)`整型变量`_year`接收一个整形参数，能被400整除是闰年返回ture，反之进行二次判断，能被4整除但不能被100整除是闰年返回ture，反之不是闰年返回false
+
+### algorithm_MyWeek.h头文件说明
+
+[algorithm_MyWeek.h文件](./include/algorithm_MyWeek/algorithm_MyWeek.h)
+![algorithm_MyWeek.h](./img/code-algorithm_MyWeek.png)
+
+#### algorithm_MyWeek.h设计思路
+
+`int func_MyWeek(int _year, bool _is_yleap_year)`整型变量`_year`接收年份为参数，布尔变量`_is_yleap_year`接收是否是闰年。通过公示可计算出`_year`年1月1日是周几并把值返回。
