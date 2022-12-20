@@ -1,3 +1,5 @@
+#ifndef __algorithm_MyWeek_h__
+#define __algorithm_MyWeek_h__
 /********************************************************************************
  * @file algorithm_MyWeek.h
  * @author lxy (2305195328@qq.com)
@@ -59,3 +61,5 @@ int func_MyWeek(int _year, bool _is_yleap_year)
     // printf("M1:%d\n", M1);
     // printf("D1:%d\n", D1);
     // printf("%d\n",(C1+Y1+M1+D1)%7);
+
+#endif

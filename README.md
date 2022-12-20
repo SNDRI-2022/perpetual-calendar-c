@@ -1,6 +1,6 @@
 # perpetual-calendar-c
 
-[远程创建项目地址](https://github.com/SNDRI-2022/perpetual-calendar-c)
+[本项目地址](https://github.com/SNDRI-2022/perpetual-calendar-c)
 
 ## 项目说明
 
@@ -75,8 +75,9 @@ gcc -std=c99 -g .\src\main.c -I .\include -o .\output\main.exe; .\output\main.ex
 
 ### main.c主文件说明
 
+程序的开始
 [main.c文件](./src/main.c)
-![main.c图](https://github.com/SNDRI-2022/perpetual-calendar-c/blob/main/img/code-main.png)
+![main.c图](./img/code-main.png)
 
 #### 接收参数部分
 
@@ -93,5 +94,10 @@ gcc -std=c99 -g .\src\main.c -I .\include -o .\output\main.exe; .\output\main.ex
 
 ### leap_year.h头文件说明
 
+判断是否为闰年
 [leap_year.h文件](./include/leap_year/leap_year.h)
 ![leap_year.h](./img/code-leap_year.png)
+
+#### 设计思路
+
+整形变量`_year`接收一个整形参数，能被400整除是闰年返回ture，反之进行二次判断，能被4整除但不能被100整除是闰年返回ture，反之不是闰年返回false

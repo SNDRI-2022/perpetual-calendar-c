@@ -1,3 +1,5 @@
+#ifndef __show_calendar_h__
+#define __show_calendar_h__
 /********************************************************************************
  * @file show_calendar.h
  * @author lxy (2305195328@qq.com)
@@ -53,3 +55,5 @@ void show_calendar(int _month, bool _is_yleap_year, int _year_1_1)
     show_calendar(_month+1,_is_yleap_year,(days[_month]+_year_1_1)%7);
     
 }
+
+#endif
