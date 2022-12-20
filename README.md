@@ -8,8 +8,9 @@ c语言作业，远程仓库用于保存
 使用Make编译工具
 
 - 语言版本 c99
-- 编辑器 Visual Studio Code
-- 编译器gcc(MinGW64)
+- 编辑器 Visual Studio Code(windows powershell)
+- 编译器 gcc(MinGW64)
+- 系统 windows11
 
 ```txt
 perpetual-calendar-c    //项目目录
@@ -43,12 +44,12 @@ perpetual-calendar-c    //项目目录
 详细配置文件在[Makefile](Makefile)中
 
 用gcc进行
-在项目目录右键打开终端 或 使用终端进入项目目录`cd perpetual-calendar-c`
+在项目目录右键打开终端 或 使用终端进入项目目录`cd perpetual-calendar-c`\
+
+**注意**:这是在windows powershell中的命令，linux系统下去掉.exe并把;替换为&&
 
 ```powshell
 gcc -std=c99 -g .\src\main.c -I .\include -o .\output\main.exe; .\output\main.exe
-或直接运行可执行文件
-.\output\main.exe
 ```
 
 #### windows
@@ -74,6 +75,23 @@ gcc -std=c99 -g .\src\main.c -I .\include -o .\output\main.exe; .\output\main.ex
 
 ### main.c主文件说明
 
-从main函数开始第一行的`system("chcp 65001");`语句让c语言程序支持输出中文
-
+[main.c文件](./src/main.c)
 ![main.c图](https://github.com/SNDRI-2022/perpetual-calendar-c/blob/main/img/code-main.png)
+
+#### 接收参数部分
+
+从main函数开始第一行的`system("chcp 65001");`语句让c语言程序支持输出中文。year用于接收参数。当argc不为2时得知用户在运行程序中没有填写参数(年份)，并进行参数的填写再由argv2函数来判断输入的参数是否合法。在接收的字符串第5替换为`\0`防止接收过多大太参数，避免程序修改未分配的内存导致的异常终止，且限制参数为4位数之内。
+
+#### 判断部分
+
+布尔类型变量`is_yleap_year`接收`func_LeapYear(year)`函数的返回值，如果是闰年返回true反之返回false
+整数类型`year_1_1`接收`func_MyWeek(year, is_yleap_year);`函数返回的值，返回程序接受参数`year`年1月1日是周几，0表示周日日，1表示周一。
+
+#### 输出部分
+
+`show_calendar(1, is_yleap_year, year_1_1);`函数将输出日历，第一个参数得知从第几月开始输出。这里1表示1月，第二个参数得知输出的年是否是闰年，第三个参数得知`参数1`是从周几开始输出。
+
+### leap_year.h头文件说明
+
+[leap_year.h文件](./include/leap_year/leap_year.h)
+![leap_year.h](./img/code-leap_year.png)
