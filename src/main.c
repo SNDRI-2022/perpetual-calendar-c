@@ -26,10 +26,10 @@ int argv2(char *_str)
 int main(int argc, char **argv)
 {
 
-	//*设置窗口大小，设置中文不乱码并清屏
+	//*设置中文不乱码
 	system("chcp 65001");
 	// system("mode con cols=120 lines=30");
-	system("cls");
+	
 
 	int year = 0;
 	if (argc != 2)
@@ -53,32 +53,33 @@ int main(int argc, char **argv)
 	show_calendar(1, is_yleap_year, year_1_1);
 	printf("程序运行结束\n");
 	system("pause");
-	// //? 调试用
-	// printf("argc:%d\n", argc);
-	// printf("argv0:%s\n", argv[0]);
-	// printf("argv1:%s\n", argv[1]);
-	// argv[1] = 1952;
-
-	// //? 测试func_LeapYear函数
-	// for (int i = 1950; i < 2050; i++)
-	// {
-	// 	if(func_LeapYear(i))
-	// 	// if (func_LeapYear(atoi(argv[1])))
-	// 		printf("%d ",i);
-	// 	// else
-	// 	// 	printf("flase");
-	// }
-
-	// //!测试用
-	// int a;
-	// scanf("%d",&a);
-	// int b = ((int)(3.4 + (a - 3) % 12 * 2.6)) % 7;
-	// int c = ((int) (3.4 + (3 - a) % 12 * 2.6)) % 7;
-	// printf("b:%d\n", b);
-	// printf("c:%d\n", c);
-	//! 调试用
-	// printf("%d年的1月1日是星期%d\n", year, (year_1_1 == 0 ? 7 : year_1_1));
-	// printf("%d/1/1 = %d\n", year, (year_1_1 == 0 ? 7 : year_1_1));
 
 	return (0);
 }
+
+// //? 调试用
+// printf("argc:%d\n", argc);
+// printf("argv0:%s\n", argv[0]);
+// printf("argv1:%s\n", argv[1]);
+// argv[1] = 1952;
+
+// //? 测试func_LeapYear函数
+// for (int i = 1950; i < 2050; i++)
+// {
+// 	if(func_LeapYear(i))
+// 	// if (func_LeapYear(atoi(argv[1])))
+// 		printf("%d ",i);
+// 	// else
+// 	// 	printf("flase");
+// }
+
+// //!测试用
+// int a;
+// scanf("%d",&a);
+// int b = ((int)(3.4 + (a - 3) % 12 * 2.6)) % 7;
+// int c = ((int) (3.4 + (3 - a) % 12 * 2.6)) % 7;
+// printf("b:%d\n", b);
+// printf("c:%d\n", c);
+//! 调试用
+// printf("%d年的1月1日是星期%d\n", year, (year_1_1 == 0 ? 7 : year_1_1));
+// printf("%d/1/1 = %d\n", year, (year_1_1 == 0 ? 7 : year_1_1));

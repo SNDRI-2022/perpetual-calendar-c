@@ -67,3 +67,11 @@ gcc -g .\src\main.c -I .\include -o .\output\main.exe; .\output\main.exe
 单编译只需要输入`make`
 
 清除输出编译文件和输出文件只需要输入`make clean`
+
+## 设计说明
+
+程序设计步骤和思路
+
+### main.c主文件说明
+
+从main函数开始第一行的`system("chcp 65001");`语句让c语言程序支持输出中文

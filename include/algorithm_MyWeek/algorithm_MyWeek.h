@@ -49,12 +49,13 @@ int func_MyWeek(int _year, bool _is_yleap_year)
     //* 算出D1
     int D = 1;
     int D1 = D%7;
+
+    return (C1 + Y1 + M1 + D1) % 7;
+}
+
     //!测试用
     // printf("C1:%d\n", C1);
     // printf("Y1:%d\n", Y1);
     // printf("M1:%d\n", M1);
     // printf("D1:%d\n", D1);
     // printf("%d\n",(C1+Y1+M1+D1)%7);
-
-    return (C1 + Y1 + M1 + D1) % 7;
-}
