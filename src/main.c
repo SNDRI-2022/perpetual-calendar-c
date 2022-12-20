@@ -51,7 +51,7 @@ int main(int argc, char **argv)
 	bool is_yleap_year = func_LeapYear(year);
 	int year_1_1 = func_MyWeek(year, is_yleap_year);
 	show_calendar(1, is_yleap_year, year_1_1);
-	printf("\n");
+	printf("程序运行结束\n");
 	system("pause");
 	// //? 调试用
 	// printf("argc:%d\n", argc);

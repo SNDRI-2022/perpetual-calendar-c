@@ -11,7 +11,7 @@ c语言作业，远程仓库用于保存
 
 ```txt
 perpetual-calendar-c    //项目目录
-├─ .vscode        //vscode配置文件目录
+├─ .vscode     //vscode配置文件
 │  ├─ launch.json
 │  ├─ settings.json
 │  └─ tasks.json
@@ -19,13 +19,16 @@ perpetual-calendar-c    //项目目录
 │  ├─ algorithm_MyWeek     //判断某年的1月1日是星期几
 │  │  ├─ algorithm_MyWeek.c
 │  │  └─ algorithm_MyWeek.h
-│  └─ leap_year      //判断是否是闰年
-│     ├─ leap_year.c
-│     └─ leap_year.h
-├─ Makefile    make配置文件
+│  ├─ leap_year      //判断是否是闰年
+│  │  ├─ leap_year.c
+│  │  └─ leap_year.h
+│  └─ show_calendar     //输出日历函数
+│     ├─ show_calendar.c
+│     └─ show_calendar.h
+├─ Makefile    //make配置文件
 ├─ output      //输出的可执行文件目录
 │  └─ main.exe
-├─ README.md   //帮助文档
+├─ README.md      //帮助文档
 └─ src      //源文件目录
    ├─ main.c
    └─ main.o
