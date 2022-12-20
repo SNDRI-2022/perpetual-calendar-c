@@ -1,6 +1,6 @@
 # perpetual-calendar-c
 
-[项目地址](https://github.com/SNDRI-2022/perpetual-calendar-c)
+[远程创建项目地址](https://github.com/SNDRI-2022/perpetual-calendar-c)
 
 ## 项目说明
 
@@ -46,7 +46,7 @@ perpetual-calendar-c    //项目目录
 在项目目录右键打开终端 或 使用终端进入项目目录`cd perpetual-calendar-c`
 
 ```powshell
-gcc -g .\src\main.c -I .\include -o .\output\main.exe; .\output\main.exe
+gcc -std=c99 -g .\src\main.c -I .\include -o .\output\main.exe; .\output\main.exe
 或直接运行可执行文件
 .\output\main.exe
 ```
@@ -75,3 +75,5 @@ gcc -g .\src\main.c -I .\include -o .\output\main.exe; .\output\main.exe
 ### main.c主文件说明
 
 从main函数开始第一行的`system("chcp 65001");`语句让c语言程序支持输出中文
+
+![main.c图](https://github.com/SNDRI-2022/perpetual-calendar-c/blob/main/img/code-main.png)
