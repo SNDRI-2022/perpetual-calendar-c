@@ -19,10 +19,10 @@
  ********************************************************************************/
 bool func_LeapYear(int _year)
 {
-    //判断_year是否能被400整除
+    //*判断_year是否能被400整除
     if (!(_year % 400))
         return true;
-    //判断_year是否能被4整除，且不能被100整除
+    //*判断_year是否能被4整除，且不能被100整除
     else if(!(_year % 4) && _year % 100)
         return true;
     return false;
