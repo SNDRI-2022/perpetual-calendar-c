@@ -41,7 +41,9 @@ perpetual-calendar-c    //项目目录
 在项目目录右键打开终端 或 使用终端进入项目目录`cd perpetual-calendar-c`
 
 ```powshell
-gcc -g .\src\main.c -I .\include -o .\output\main.exe; .\output\main.exe 
+gcc -g .\src\main.c -I .\include -o .\output\main.exe; .\output\main.exe
+或直接运行可执行文件
+.\output\main.exe
 ```
 
 #### windows
