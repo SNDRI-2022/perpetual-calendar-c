@@ -29,7 +29,6 @@ int main(int argc, char **argv)
 	//*设置中文不乱码
 	system("chcp 65001");
 	// system("mode con cols=120 lines=30");
-	
 
 	int year = 0;
 	if (argc != 2)
@@ -48,8 +47,17 @@ int main(int argc, char **argv)
 		year = argv2(argv[1]);
 	}
 	printf("输入年份为(Your input is):%d\n", year);
+	//*判断是否是闰年
 	bool is_yleap_year = func_LeapYear(year);
+	//*判断那年1月1日是周几
 	int year_1_1 = func_MyWeek(year, is_yleap_year);
+	//*输出是否是闰年，和那年1月1日是周几
+	if (is_yleap_year)
+		printf("%d年是闰年\n", year);
+	else
+		printf("%d年不是闰年\n", year);
+	printf("%d年1月1日是周%d\n", year, (year_1_1 == 0 ? 7 : year_1_1));
+	//*输出日历
 	show_calendar(1, is_yleap_year, year_1_1);
 	printf("程序运行结束\n");
 	system("pause");
